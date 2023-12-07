@@ -5,12 +5,14 @@ let buttonClear = document.querySelector(".clear")
 let p = document.createElement("p")
 let i = 0;
 
+// document.querySelector("form input").innerText = (localStorage.getItem(`value${i}`, input.value)
 
 buttonSave.addEventListener('click', () => {
     localStorage.setItem(`value${i}`, input.value)
     let userSalvati = document.querySelector(".savedUser")
     let p = document.createElement("p")
     p.innerText = input.value
+
     userSalvati.appendChild(p)
     i++;
     input.value = ""
