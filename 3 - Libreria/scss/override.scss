@@ -1,1 +1,26 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/buttons';
+
+//Creo variabile con colore;
+$customBg: #D6C7DE;
+$customBgButton: #A071A3;
+$customColorButton: #432D47;
+$customYellow: #EDE59C;
+
+
+//Creo nuova mappa di colori.
+$custom-colors: (
+    bgButton: $customBgButton,
+    textButton: $customColorButton,
+    containerBg: $customBg,
+    customYellow: $customYellow
+
+);
+
+//Eseguo merge, ovvero unione con theme-colors, mappa originale di bootstrap
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
